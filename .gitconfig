@@ -1,0 +1,16 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	type = cat-file -t
+	dump = cat-file -p
+	hist = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(white bold)| %Creset%s%d %C(red)[%an]\" --graph --date=short
+	ciar = commit --amend -C HEAD
+	cia = commit -a
+	ai = add -i
+[color]
+	ui = true
+[user]
+	name = Jeremy Cook
+	email = jeremycook0@gmail.com
