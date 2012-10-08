@@ -14,3 +14,5 @@
 [user]
 	name = Jeremy Cook
 	email = jeremycook0@gmail.com
+[core]
+	excludesfile = ~/.gitignore
