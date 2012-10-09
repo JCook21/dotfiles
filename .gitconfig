@@ -9,6 +9,7 @@
 	ciar = commit --amend -C HEAD
 	cia = commit -a
 	ai = add -i
+	lol = log --graph --oneline
 [color]
 	ui = true
 [user]
