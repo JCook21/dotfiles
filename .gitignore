@@ -1,3 +1,4 @@
 *.vimrc
 *.lvimrc
 *.vim/bundle/**
+*.swp
