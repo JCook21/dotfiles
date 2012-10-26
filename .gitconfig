@@ -17,3 +17,4 @@
 	email = jeremycook0@gmail.com
 [core]
 	excludesfile = ~/.gitignore
+	autocrlf = input
