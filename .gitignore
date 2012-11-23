@@ -2,3 +2,4 @@
 *.lvimrc
 *.vim/bundle/**
 *.swp
+*.swo
