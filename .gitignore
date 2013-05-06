@@ -3,4 +3,4 @@
 *.vim/bundle/**
 *.swp
 *.swo
-*.vagrant/**
+antigen/*
