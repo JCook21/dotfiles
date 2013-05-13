@@ -1,6 +1,6 @@
-source ~/dotfiles/antigen.zsh
+source ~/dotfiles/antigen/antigen.zsh
 
-antigen-lib
+antigen use oh-my-zsh
 antigen-bundle git
 antigen-bundle capistrano
 antigen-bundle composer
