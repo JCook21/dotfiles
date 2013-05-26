@@ -9,6 +9,7 @@ antigen-bundle symfony2
 antigen-bundle svn
 antigen-bundle tmux
 antigen-bundle debian
+antigen-bundle command-not-found
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
@@ -43,3 +44,5 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
+
+DEFAULT_USER="jeremy"
