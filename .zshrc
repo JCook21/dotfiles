@@ -11,6 +11,7 @@ antigen-bundle tmux
 antigen-bundle debian
 antigen-bundle supervisor
 antigen-bundle svn
+antigen-bundle command-not-found
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
