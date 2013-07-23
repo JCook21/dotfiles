@@ -28,11 +28,11 @@ COMPLETION_WAITING_DOTS="true"
 setopt autocd
 
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/vagrant/bin
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/vagrant/bin:/home/jcook/projects/boris/vendor/bin
 
 # Force Tmux to use 256 colours
-export TERM=screen-256color
-alias tmux="tmux -2"
+#export TERM=screen-256color
+#alias tmux="tmux -2"
 
 # Alias for composer. Allows command line apc to be enabled but assumes global installation of composer.
 alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
@@ -46,5 +46,3 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
-
-DEFAULT_USER="jcook"
