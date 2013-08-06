@@ -30,10 +30,6 @@ setopt autocd
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/vagrant/bin:/home/jcook/projects/boris/vendor/bin
 
-# Force Tmux to use 256 colours
-#export TERM=screen-256color
-#alias tmux="tmux -2"
-
 # Alias for composer. Allows command line apc to be enabled but assumes global installation of composer.
 alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
 
