@@ -2,6 +2,7 @@ source ~/dotfiles/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen-bundle git
+antigen-bundle git-extras
 antigen-bundle capistrano
 antigen-bundle composer
 antigen-bundle phing
