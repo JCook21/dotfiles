@@ -6,6 +6,7 @@ antigen-bundle capistrano
 antigen-bundle composer
 antigen-bundle phing
 antigen-bundle symfony2
+antigen-bundle symfony
 antigen-bundle svn
 antigen-bundle tmux
 antigen-bundle debian
