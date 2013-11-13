@@ -10,6 +10,7 @@ antigen-bundle svn
 antigen-bundle tmux
 antigen-bundle debian
 antigen-bundle command-not-found
+antigen-bundle vagrant
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
@@ -46,3 +47,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
 
 DEFAULT_USER="jeremy"
+export GPGKEY=FE59B8EC
+set -o vi
+bindkey -v
+bindkey ^R history-incremental-search-backward
