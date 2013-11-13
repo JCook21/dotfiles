@@ -2,13 +2,17 @@ source ~/dotfiles/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen-bundle git
+antigen-bundle git-extras
 antigen-bundle capistrano
 antigen-bundle composer
 antigen-bundle phing
 antigen-bundle symfony2
+antigen-bundle symfony
 antigen-bundle svn
 antigen-bundle tmux
 antigen-bundle debian
+antigen-bundle supervisor
+antigen-bundle svn
 antigen-bundle command-not-found
 antigen-bundle vagrant
 
@@ -27,11 +31,7 @@ COMPLETION_WAITING_DOTS="true"
 setopt autocd
 
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/vagrant/bin
-
-# Force Tmux to use 256 colours
-export TERM=screen-256color
-alias tmux="tmux -2"
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/vagrant/bin:/home/jcook/projects/boris/vendor/bin
 
 # Alias for composer. Allows command line apc to be enabled but assumes global installation of composer.
 alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
