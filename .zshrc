@@ -27,6 +27,8 @@ DISABLE_AUTO_TITLE="true"
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
+eval `dircolors ~/.dircolors`
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
