@@ -1,0 +1,41 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	type = cat-file -t
+	dump = cat-file -p
+	hist = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(white bold)| %Creset%s%d %C(red)[%an]\" --graph --date=short
+	ciar = commit --amend -C HEAD
+	cia = commit -a
+	ai = add -i
+	lol = log --graph --oneline
+	stash-drop = stash drop
+	ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate
+	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+	lds = log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=short
+	ld = log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=relative
+	le = log --oneline --decorate
+	filelog = log -u
+	fl = log -u
+	dl = "!git ll -1"
+	dlc = diff --cached HEAD^
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+	f = "!git ls-files | grep -i"
+	gr = grep -Ii
+	la = "!git config -l | grep alias | cut -c 7-"
+[color]
+	ui = true
+[user]
+	name = Jeremy Cook
+	email = jeremycook0@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+	editor = vim
+[push]
+	default = matching
+[init]
+	templatedir = ~/.git_template
