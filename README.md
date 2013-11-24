@@ -4,4 +4,4 @@ A collection of dotfiles.
 
 ## Installation
 
-This project uses [Antigen](https://github.com/zsh-users/antigen) to manage zsh plugins. If you're using zsh and not bash make sure to clone this project using the --recursive option to get the antigen submodule checked out (or update the submodule after cloning). Once you've cloned this project create symlinks from your home directory to any of the dotfiles in this repo that you wish to use, e.g. 'ln -nfs dotfiles/.zshrc .'.
+This project use [homesick] (https://github.com/technicalpickles/homesick) to manage the dotfiles it contains. Once you've installed homesick and add this repository as a castle installing the dotfiles is as simple as calling 'homesick symlink dotfiles'. You will also need to start vim and run ':BundleInstall' to install the plugins I use.
