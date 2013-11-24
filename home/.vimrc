@@ -51,6 +51,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'smerrill/vcl-vim-plugin'
 Bundle 'stephenmckinney/vim-solarized-powerline'
+Bundle 'tejr/vim-tmux'
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * set nocursorline
