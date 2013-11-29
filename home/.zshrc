@@ -17,6 +17,7 @@ antigen-bundle command-not-found
 antigen-bundle vagrant
 antigen-bundle gem
 antigen-bundle ruby
+antigen-bundle rvm
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
