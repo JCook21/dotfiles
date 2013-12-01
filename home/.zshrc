@@ -22,17 +22,16 @@ antigen-bundle rvm
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
 antigen-theme agnoster
-#antigen-theme dpoggi
-
 antigen-apply
-# Uncomment following line if you want to disable autosetting terminal title.
+
+# Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
+
 export TERM=xterm-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
 
 eval `dircolors ~/.dircolors`
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
 setopt autocd
@@ -52,6 +51,8 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
+
+# Load in local settings from ~/.zsh_profile
 if [ -e ~/.zsh_profile ]
 then
         source ~/.zsh_profile
