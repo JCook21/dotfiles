@@ -44,7 +44,7 @@ Bundle 'othree/html5-syntax.vim'
 Bundle 'JCook21/vim-twig'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'vim-ruby/vim-ruby'
@@ -183,6 +183,8 @@ set encoding=UTF-8
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " Powerline symbols.
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme='short'
+let g:Powerline_colorscheme='solarized16_dark'
 
 " Reads the skeleton php file
 " Note: The normal command afterwards deletes an ugly pending line and moves
