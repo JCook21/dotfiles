@@ -183,8 +183,11 @@ set encoding=UTF-8
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " Powerline symbols.
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_theme='short'
-let g:Powerline_colorscheme='solarized16_dark'
+if (&background == 'light')
+  let g:Powerline_colorscheme='solarized256_light'
+else
+  let g:Powerline_colorscheme='solarized256_dark'
+endif
 
 " Reads the skeleton php file
 " Note: The normal command afterwards deletes an ugly pending line and moves
