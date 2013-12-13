@@ -42,6 +42,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'JCook21/vim-twig'
+Bundle 'Lokaltog/powerline'
+Bundle 'pearofducks/solarized-powerlines'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'StanAngeloff/php.vim'
@@ -49,7 +51,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'smerrill/vcl-vim-plugin'
-Bundle 'stephenmckinney/vim-solarized-powerline'
 Bundle 'tejr/vim-tmux'
 
 " Highlight current line in insert mode.
@@ -192,9 +193,10 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " Powerline symbols.
 let g:Powerline_symbols = 'fancy'
+let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized' }}}
 set noshowmode
 
 " Autoreload Vimrc every time it's saved.
