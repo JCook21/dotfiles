@@ -7,6 +7,3 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = git@github.com:seebi/dircolors-solarized.git
-[submodule "powerline"]
-	path = powerline
-	url = git@github.com:Lokaltog/powerline.git
