@@ -44,7 +44,6 @@ Bundle 'othree/html5-syntax.vim'
 Bundle 'JCook21/vim-twig'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'Lokaltog/powerline'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'vim-ruby/vim-ruby'
@@ -52,7 +51,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'smerrill/vcl-vim-plugin'
 Bundle 'stephenmckinney/vim-solarized-powerline'
 Bundle 'tejr/vim-tmux'
-Bundle 'stephenmckinney/vim-solarized-powerline'
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * set nocursorline
@@ -181,15 +179,6 @@ let g:UltiSnipsSnippetDirectories = ["snippets", "templates_snip"]
 set laststatus=2
 set encoding=UTF-8
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-" Powerline symbols.
-let g:Powerline_symbols = 'fancy'
-if (&background == 'light')
-  let g:Powerline_colorscheme='solarized256_light'
-else
-  let g:Powerline_colorscheme='solarized256_dark'
-endif
-
 " Reads the skeleton php file
 " Note: The normal command afterwards deletes an ugly pending line and moves
 " the cursor to the middle of the file.
@@ -203,9 +192,10 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
 " Powerline symbols.
 let g:Powerline_symbols = 'fancy'
+set noshowmode
 
 " Autoreload Vimrc every time it's saved.
 if has("autocmd")
