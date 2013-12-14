@@ -25,7 +25,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-" original repos on github
+" Plugins
 Bundle 'SirVer/ultisnips'
 Bundle 'tobyS/pdv'
 Bundle 'tobyS/vmustache'
@@ -38,10 +38,10 @@ Bundle 'joonty/vim-phpunitqf'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'arnaud-lb/vim-php-namespace'
-Bundle 'othree/html5-syntax.vim'
-Bundle 'JCook21/vim-twig'
-Bundle 'Lokaltog/powerline'
 Bundle 'stephpy/vim-php-cs-fixer'
+
+" Syntax highlighting
+Bundle 'JCook21/vim-twig'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'groenewege/vim-less'
@@ -49,6 +49,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'smerrill/vcl-vim-plugin'
 Bundle 'tejr/vim-tmux'
+Bundle 'othree/html5-syntax.vim'
+
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * set nocursorline
@@ -190,7 +192,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
 " Powerline symbols.
 let g:Powerline_symbols = 'fancy'
 let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized' }}}
