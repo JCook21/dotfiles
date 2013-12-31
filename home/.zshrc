@@ -18,6 +18,7 @@ antigen-bundle vagrant
 antigen-bundle gem
 antigen-bundle ruby
 antigen-bundle rvm
+antigen-bundle bundler
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
