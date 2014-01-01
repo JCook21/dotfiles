@@ -28,8 +28,7 @@ antigen-apply
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
 
-export TERM=xterm-256color
-
+# Set solarized colours for directories.
 eval `dircolors ~/.dircolors`
 
 # Display red dots while waiting for completion.
@@ -52,6 +51,9 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
+
+# Other environment variable exports
+export TERM=xterm-256color
 export EDITOR=vim
 
 # Load in local settings from ~/.zsh_profile
