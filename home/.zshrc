@@ -42,6 +42,9 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 # Alias for composer. Allows command line apc to be enabled but assumes global installation of composer.
 alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
 
+# Make sure vim loads without requiring the X11 libraries.
+alias vim="vim -X"
+
 # Coloured output for man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
