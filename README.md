@@ -4,4 +4,8 @@ A collection of dotfiles.
 
 ## Installation
 
-This project use [homesick] (https://github.com/technicalpickles/homesick) to manage the dotfiles it contains. Once you've installed homesick and add this repository as a castle installing the dotfiles is as simple as calling 'homesick symlink dotfiles'. You will also need to start vim and run ':BundleInstall' to install the plugins I use.
+This project use [homesick] (https://github.com/technicalpickles/homesick) to manage the dotfiles it contains. Once you've installed homesick add this repository using 'homesick clone'. To finish installation run:
+
+`homesick rc dotfiles`
+
+This will execute the .homesickrc file, which will add the solarized colour scheme, make the formatting of the 'ls' command also use solarized colors and install all of the Vim plugins using Vundle.
