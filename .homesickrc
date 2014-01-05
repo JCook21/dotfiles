@@ -1,0 +1,2 @@
+system('ln -nfs ~/.homesick/repos/dotfiles/dircolors-solarized/dircolors.ansi-dark ~/.dircolors')
+system('vim +BundleInstall +qall')
