@@ -34,6 +34,7 @@ eval `dircolors ~/.dircolors`
 # Display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+# Automatically use cd when paths are entered without cd
 setopt autocd
 
 # Customize to your needs...
@@ -45,19 +46,25 @@ alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
 # Make sure vim loads without requiring the X11 libraries.
 alias vim="vim -X"
 
-# Coloured output for man pages
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-export LESS=-r
+# Colored man pages (from https://wiki.archlinux.org/index.php/Man_Page#Colored_man_pages)
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;47;34m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+      man "$@"
+}
 
-# Other environment variable exports
-export TERM=xterm-256color
-export EDITOR=vim
+# number of lines kept in history
+export HISTSIZE=1000
+# number of lines saved in the history after logout
+export SAVEHIST=1000
+# append command to history file once executed
+setopt inc_append_history
 
 # Load in local settings from ~/.zsh_profile
 if [ -e ~/.zsh_profile ]
