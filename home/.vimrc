@@ -1,7 +1,3 @@
-" .vimrc by Tobias Schlitt <toby@php.net>.
-" No copyright, feel free to use this, as you like, as long as you keep some
-" credits.
-"
 " Delete all auto commands (needed to auto source .vimrc after saving)
 autocmd!
 
@@ -140,6 +136,9 @@ let g:localvimrc_count=1
 
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
+" Better :sign interface symbols
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
 
 " Allow the dot command to be used in visual mode
 :vnoremap . :norm.<CR>
