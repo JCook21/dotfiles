@@ -40,9 +40,6 @@ setopt autocd
 # Customize to your needs...
 export PATH=$PATH:/opt/vagrant/bin:$HOME/.rvm/bin
 
-# Alias for composer. Allows command line apc to be enabled but assumes global installation of composer.
-alias composer="php -d apc.enable_cli=0 /usr/local/bin/composer"
-
 # Make sure vim loads without requiring the X11 libraries.
 alias vim="vim -X"
 
