@@ -3,6 +3,7 @@ autocmd!
 
 :set mouse=a
 :set nocompatible
+
 " required by Vundle!
 filetype off
 
@@ -86,14 +87,13 @@ augroup END
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
 
-" Use filetype plugins, e.g. for PHP
-filetype plugin on
+" Use filetype plugins
 filetype plugin indent on
 
 " Use built in matchit plugin
 runtime macros/matchit.vim
 
-
+" Filetype settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -133,16 +133,6 @@ set backspace=start,eol,indent
 " Allow file inline modelines to provide settings
 set modeline
 
-let g:localvimrc_sandbox=0
-let g:localvimrc_ask=0
-let g:localvimrc_count=1
-
-let g:syntastic_enable_signs=1
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
-" Better :sign interface symbols
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-
 " Allow the dot command to be used in visual mode
 :vnoremap . :norm.<CR>
 
@@ -171,13 +161,6 @@ setlocal smartindent
 " Use pman for manual pages
 setlocal keywordprg=pman
 
-" Configure Ultisnips
-let g:UltiSnipsExpandTrigger = "<leader><Tab>"
-let g:UltiSnipsListSnippets = "<leader><C-Tab>"
-" Set a custom snippets directory
-let g:UltiSnipsSnippetsDir = $HOME . "/.vim/snippets"
-let g:UltiSnipsSnippetDirectories = ["snippets", "templates_snip"]
-
 set laststatus=2
 set encoding=UTF-8
 
@@ -194,13 +177,33 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
-" Powerline symbols.
-let g:Powerline_symbols = 'fancy'
-let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized' }}}
 set noshowmode
 
 " Autoreload Vimrc every time it's saved.
 if has("autocmd")
 	autocmd! bufwritepost .vimrc source $MYVIMRC
 endif
+
+" Plugin settings " ================================================================================
+" Localvimrc plugin settings
+let g:localvimrc_sandbox=0
+let g:localvimrc_ask=0
+let g:localvimrc_count=1
+
+" Syntastic settings
+let g:syntastic_enable_signs=1
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+
+" Ultisnips settings
+let g:UltiSnipsExpandTrigger = "<leader><Tab>"
+let g:UltiSnipsListSnippets = "<leader><C-Tab>"
+" Set a custom snippets directory
+let g:UltiSnipsSnippetsDir = $HOME . "/.vim/snippets"
+let g:UltiSnipsSnippetDirectories = ["snippets", "templates_snip"]
+
+" Powerline settings
+set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
+let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized' }}}
