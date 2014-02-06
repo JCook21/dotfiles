@@ -47,6 +47,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'smerrill/vcl-vim-plugin'
 Bundle 'tejr/vim-tmux'
 Bundle 'othree/html5-syntax.vim'
+Bundle 'elzr/vim-json.git'
 
 
 " Highlight current line in insert mode.
@@ -71,18 +72,6 @@ call togglebg#map("<F12>")
 
 " Save files as root
 cnoremap w!! w !sudo tee % >/dev/null
-
-" JSON syntax highlighting
-au! BufRead,BufNewFile *.json set ft=javascript
-augroup json_autocmd
-	autocmd!
-	autocmd FileType json set autoindent
-	autocmd FileType json set formatoptions=tcq2l
-	autocmd FileType json set textwidth=78 shiftwidth=2
-	autocmd FileType json set softtabstop=2 tabstop=8
-	autocmd FileType json set expandtab
-	autocmd FileType json set foldmethod=syntax
-augroup END
 
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
@@ -207,3 +196,6 @@ let g:UltiSnipsSnippetDirectories = ["snippets", "templates_snip"]
 set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
 let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized' }}}
+
+" JSON syntax plugin
+let g:vim_json_syntax_conceal = 0
