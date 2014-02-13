@@ -95,6 +95,10 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 
+au BufRead,BufNewFile *.phps set filetype=php
+au BufRead,BufNewFile *.php set indentexpr= | set smartindent
+
+
 " Associate .md files with markdown.
 au BufRead,BufNewFile *.md set filetype=markdown
 

@@ -52,9 +52,6 @@ vnoremap <buffer> <C-c> :call PhpUnComment()<CR>
 " Maybe this way in other coding standards
 inoremap <buffer>  { {<CR>}<C-O>O
 
-au BufRead,BufNewFile *.phps set filetype=php
-au BufRead,BufNewFile *.php set indentexpr= | set smartindent
-
 " The completion dictionary is provided by Rasmus:
 " http://lerdorf.com/funclist.txt
 setlocal dictionary-=~/.vim/funclist.txt dictionary+=~/.vim/funclist.txt
