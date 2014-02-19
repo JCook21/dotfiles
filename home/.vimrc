@@ -170,7 +170,11 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Let powerline handle displaying the status line.
 set noshowmode
+
+" Use python to pretty format json.
+map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Autoreload Vimrc every time it's saved.
 if has("autocmd")
