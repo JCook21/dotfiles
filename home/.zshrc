@@ -28,9 +28,6 @@ antigen-apply
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
 
-# Set solarized colours for directories.
-eval `dircolors ~/.dircolors`
-
 # Display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
