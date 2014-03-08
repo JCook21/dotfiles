@@ -37,9 +37,6 @@ setopt autocd
 # Customize to your needs...
 export PATH=$PATH:/opt/vagrant/bin:$HOME/.rvm/bin
 
-# Make sure vim loads without requiring the X11 libraries.
-alias vim="vim -X"
-
 # Colored man pages (from https://wiki.archlinux.org/index.php/Man_Page#Colored_man_pages)
 man() {
   env \
