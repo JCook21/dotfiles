@@ -198,7 +198,7 @@ let g:UltiSnipsExpandTrigger = "<leader><Tab>"
 let g:UltiSnipsListSnippets = "<leader><C-Tab>"
 " Set a custom snippets directory
 let g:UltiSnipsSnippetsDir = $HOME . "/.vim/snippets"
-let g:UltiSnipsSnippetDirectories = ["snippets", "templates_snip"]
+let g:UltiSnipsSnippetDirectories = ["mysnippets", "templates_snip"]
 
 " Powerline settings
 set rtp+=~/.homesick/repos/dotfiles/powerline/powerline/bindings/vim
