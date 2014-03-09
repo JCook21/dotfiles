@@ -34,9 +34,6 @@ COMPLETION_WAITING_DOTS="true"
 # Automatically use cd when paths are entered without cd
 setopt autocd
 
-# Customize to your needs...
-export PATH=$PATH:/opt/vagrant/bin:$HOME/.rvm/bin
-
 # Colored man pages (from https://wiki.archlinux.org/index.php/Man_Page#Colored_man_pages)
 man() {
   env \
@@ -59,6 +56,8 @@ setopt inc_append_history
 
 # vim mode
 bindkey -v
+
+# Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
 # Load in local settings from ~/.zsh_profile
