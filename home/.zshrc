@@ -57,6 +57,10 @@ export SAVEHIST=1000
 # append command to history file once executed
 setopt inc_append_history
 
+# vim mode
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # Load in local settings from ~/.zsh_profile
 if [ -e ~/.zsh_profile ]
 then
