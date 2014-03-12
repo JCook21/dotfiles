@@ -207,3 +207,8 @@ let g:powerline_config_overrides = { 'ext': { 'vim': { 'colorscheme': 'solarized
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
+
+" Trims whitespace in a file.
+function! TrimWhiteSpace()
+	%s/\s\+$//e
+endfunction
