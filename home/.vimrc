@@ -155,7 +155,7 @@ setlocal smartindent
 setlocal keywordprg=pman
 
 set laststatus=2
-set encoding=UTF-8
+set encoding=utf-8
 
 " Reads the skeleton php file
 " Note: The normal command afterwards deletes an ugly pending line and moves

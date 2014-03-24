@@ -20,6 +20,7 @@ antigen-bundle ruby
 antigen-bundle rvm
 antigen-bundle bundler
 antigen-bundle brew
+antigen-bundle npm
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
