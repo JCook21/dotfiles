@@ -9,12 +9,6 @@ setlocal nowrap
 " line
 setlocal formatoptions=qroct
 
-" Use php syntax check when doing :make
-setlocal makeprg=php\ -l\ %
-
-" Linewidth to 79, because of the formatoptions this is only valid for
-" comments
-setlocal textwidth=79
 setlocal formatoptions=qrocb
 
 " Use errorformat for parsing PHP error output
@@ -39,7 +33,7 @@ let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run opti
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
 
 " Syntastic php options.
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers=['php', 'phpmd', 'phpcs']
 
 " Map <CTRL>-a to alignment function
 vnoremap <buffer> <C-a> :call PhpAlign()<CR>
@@ -118,11 +112,11 @@ func! PhpUnComment() range
     let &g:paste = l:paste
 endfunc
 
-imap <buffer> <Leader>u <C-O>:call PhpInsertUse()<CR>
-map <buffer> <Leader>u :call PhpInsertUse()<CR>
-
-imap <buffer> <Leader>e <C-O>:call PhpExpandClass()<CR>
-map <buffer> <Leader>e :call PhpExpandClass()<CR>
+"imap <buffer> <Leader>u <C-O>:call PhpInsertUse()<CR>
+"map <buffer> <Leader>u :call PhpInsertUse()<CR>
+"
+"imap <buffer> <Leader>e <C-O>:call PhpExpandClass()<CR>
+"map <buffer> <Leader>e :call PhpExpandClass()<CR>
 
 " Search the php manual from within Vim
 function! OpenPhpFunction (keyword)

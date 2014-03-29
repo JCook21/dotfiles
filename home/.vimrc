@@ -189,9 +189,12 @@ let g:localvimrc_count=1
 
 " Syntastic settings
 let g:syntastic_enable_signs=1
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
+let g:syntastic_jshint_exec = '/usr/local/bin/jshint'
+let g:syntastic_javascript_checkers = ['jslint', 'jshint']
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
