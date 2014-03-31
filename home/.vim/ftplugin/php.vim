@@ -1,5 +1,7 @@
 " .vim/ftplugin/php.vim by Tobias Schlitt <toby@php.net>.
 " No copyright, feel free to use this, as you like.
+set omnifunc=phpcomplete#CompletePHP
+setlocal ts=4 sts=4 sw=4 expandtab
 let PHP_autoformatcomment = 1
 
 " Do not wrap lines automatically

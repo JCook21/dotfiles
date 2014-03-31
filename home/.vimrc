@@ -75,6 +75,9 @@ cnoremap w!! w !sudo tee % >/dev/null
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
 
+" Use pman for manual pages
+setlocal keywordprg=pman
+
 " Use filetype plugins
 filetype plugin indent on
 
@@ -97,7 +100,6 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 
 au BufRead,BufNewFile *.phps set filetype=php
-
 
 " Associate .md files with markdown.
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -139,21 +141,17 @@ autocmd InsertLeave <buffer> set nopaste
 set wildmenu
 set wildmode=list:longest
 
+" Use a fast terminal since this is 2014...
 set ttyfast
 
 " Save more commands in history
 set history=200
 
-" Auto expand tabs to spaces
-setlocal expandtab
-
-" Use pman for manual pages
-setlocal keywordprg=pman
-
 set laststatus=2
 set encoding=utf-8
 
 " Reads the skeleton php file
+" TODO: How can this be moved out of this file?
 " Note: The normal command afterwards deletes an ugly pending line and moves
 " the cursor to the middle of the file.
 autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdda
@@ -189,8 +187,6 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
-let g:syntastic_jshint_exec = '/usr/local/bin/jshint'
-let g:syntastic_javascript_checkers = ['jslint', 'jshint']
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
