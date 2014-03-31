@@ -1,5 +1,11 @@
 source ~/.homesick/repos/dotfiles/antigen/antigen.zsh
 
+# Load in local settings from ~/.zsh_profile
+if [ -e ~/.zsh_profile ]
+then
+        source ~/.zsh_profile
+fi
+
 antigen use oh-my-zsh
 antigen-bundle git
 antigen-bundle git-extras
@@ -62,8 +68,3 @@ bindkey -v
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
-# Load in local settings from ~/.zsh_profile
-if [ -e ~/.zsh_profile ]
-then
-        source ~/.zsh_profile
-fi

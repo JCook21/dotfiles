@@ -62,13 +62,12 @@ set hidden
 set number
 
 set wrapscan
+syntax on
 
 " Colorscheme
-syntax on
 set background=dark
 colorscheme solarized
 call togglebg#map("<F12>")
-
 
 " Save files as root
 cnoremap w!! w !sudo tee % >/dev/null
@@ -79,6 +78,10 @@ runtime! ftplugin/man.vim
 " Use filetype plugins
 filetype plugin indent on
 
+" Auto indent after a {
+set autoindent
+set smartindent
+
 " Use built in matchit plugin
 runtime macros/matchit.vim
 
@@ -88,15 +91,12 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType twig setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 
 au BufRead,BufNewFile *.phps set filetype=php
-au BufRead,BufNewFile *.php set indentexpr= | set smartindent
 
 
 " Associate .md files with markdown.
@@ -146,10 +146,6 @@ set history=200
 
 " Auto expand tabs to spaces
 setlocal expandtab
-
-" Auto indent after a {
-setlocal autoindent
-setlocal smartindent
 
 " Use pman for manual pages
 setlocal keywordprg=pman
