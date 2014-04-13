@@ -9,17 +9,12 @@ fi
 antigen use oh-my-zsh
 antigen-bundle git
 antigen-bundle git-extras
-antigen-bundle capistrano
 antigen-bundle composer
 antigen-bundle phing
 antigen-bundle symfony2
-antigen-bundle symfony
-antigen-bundle svn
 antigen-bundle tmux
-antigen-bundle debian
 antigen-bundle supervisor
-antigen-bundle svn
-antigen-bundle command-not-found
+#antigen-bundle command-not-found
 antigen-bundle vagrant
 antigen-bundle gem
 antigen-bundle ruby
