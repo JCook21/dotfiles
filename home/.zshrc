@@ -9,11 +9,11 @@ fi
 antigen use oh-my-zsh
 antigen-bundle git
 antigen-bundle git-extras
-antigen-bundle composer
-antigen-bundle phing
-antigen-bundle symfony2
+#antigen-bundle composer
+#antigen-bundle phing
+#antigen-bundle symfony2
 antigen-bundle tmux
-antigen-bundle supervisor
+#antigen-bundle supervisor
 #antigen-bundle command-not-found
 antigen-bundle vagrant
 antigen-bundle gem
@@ -58,7 +58,7 @@ export SAVEHIST=1000
 setopt inc_append_history
 
 # vim mode
-bindkey -v
+#bindkey -v
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
