@@ -15,7 +15,6 @@ antigen bundles <<EOBUNDLES
 	 gem
 	 ruby
 	 rvm
-	 bundler
 	 brew
 	 npm
 
@@ -60,4 +59,8 @@ setopt inc_append_history
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
+
+
+# Source RVM if it's installed
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
