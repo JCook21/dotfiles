@@ -17,6 +17,8 @@ antigen bundles <<EOBUNDLES
 	 rvm
 	 brew
 	 npm
+	 chucknorris
+	 vundle
 
 	 zsh-users/zsh-syntax-highlighting
 
@@ -54,13 +56,10 @@ export SAVEHIST=1000
 # append command to history file once executed
 setopt inc_append_history
 
-# vim mode
-#bindkey -v
-
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
 
 # Source RVM if it's installed
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
