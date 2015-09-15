@@ -24,7 +24,7 @@
 	ui = true
 [user]
 	name = Jeremy Cook
-	email = jeremycook0@gmail.com
+	email = jeremycook0@icloud.com
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
