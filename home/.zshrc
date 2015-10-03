@@ -56,11 +56,6 @@ setopt inc_append_history
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
-#unalias run-help
-#autoload run-help
-#HELPDIR=/usr/local/share/zsh/help
-
-
 # Source RVM if it's installed
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
