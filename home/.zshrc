@@ -17,11 +17,8 @@ antigen bundles <<EOBUNDLES
 	 rvm
 	 brew
 	 npm
-	 chucknorris
 	 vundle
-
 	 zsh-users/zsh-syntax-highlighting
-
 EOBUNDLES
 
 antigen-theme agnoster
@@ -58,6 +55,10 @@ setopt inc_append_history
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
+
+#unalias run-help
+#autoload run-help
+#HELPDIR=/usr/local/share/zsh/help
 
 
 # Source RVM if it's installed
