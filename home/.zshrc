@@ -57,5 +57,5 @@ setopt inc_append_history
 bindkey '^R' history-incremental-search-backward
 
 # Source RVM if it's installed
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$HOME/.rvm/bin:$PATH"
 
