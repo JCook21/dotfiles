@@ -1,3 +1,4 @@
+notification :terminal_notifier
 notification :tmux,
   display_message: true,
   timeout: 5,
