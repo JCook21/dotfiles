@@ -1,11 +1,5 @@
 source ~/.homesick/repos/dotfiles/antigen/antigen.zsh
 
-# Load in local settings from ~/.zsh_profile
-if [ -e ~/.zsh_profile ]
-then
-        source ~/.zsh_profile
-fi
-
 antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 	 git
@@ -56,6 +50,18 @@ setopt inc_append_history
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
-# Source RVM if it's installed
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && export PATH="$HOME/.rvm/bin:$PATH"
+# Add support for colors in ls
+if whence dircolors >/dev/null; then
+  eval "$(dircolors -b)"
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  alias ls='ls --color'
+else
+  export CLICOLOR=1
+  zstyle ':completion:*:default' list-colors ''
+fi
 
+# Load in local settings from ~/.zsh_profile
+if [ -e ~/.zsh_profile ]
+then
+        source ~/.zsh_profile
+fi
