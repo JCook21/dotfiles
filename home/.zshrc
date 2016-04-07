@@ -13,6 +13,7 @@ antigen bundles <<EOBUNDLES
 	 npm
 	 vundle
 	 zsh-users/zsh-syntax-highlighting
+	 gradle
 EOBUNDLES
 
 antigen-theme agnoster
