@@ -51,6 +51,10 @@ setopt inc_append_history
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
 # Add support for colors in ls
 if whence dircolors >/dev/null; then
   eval "$(dircolors -b)"
@@ -66,3 +70,5 @@ if [ -e ~/.zsh_profile ]
 then
         source ~/.zsh_profile
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
