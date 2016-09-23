@@ -16,8 +16,8 @@ antigen bundles <<EOBUNDLES
 	 gradle
 EOBUNDLES
 
-antigen-theme agnoster
-antigen-apply
+antigen theme agnoster
+antigen apply
 
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
@@ -51,9 +51,9 @@ setopt inc_append_history
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/help
+#unalias run-help
+#autoload run-help
+#HELPDIR=/usr/local/share/zsh/help
 
 # Add support for colors in ls
 if whence dircolors >/dev/null; then
