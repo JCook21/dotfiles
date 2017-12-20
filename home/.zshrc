@@ -52,6 +52,8 @@ setopt inc_append_history
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
+autoload -U edit-command-line
+
 # Add support for colors in ls
 if whence dircolors >/dev/null; then
   eval "$(dircolors -b)"
