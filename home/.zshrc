@@ -1,21 +1,19 @@
 source ~/.homesick/repos/dotfiles/antigen/antigen.zsh
 
 antigen use oh-my-zsh
-antigen bundles <<EOBUNDLES
-	 git
-	 git-extras
-	 tmux
-	 vagrant
-	 gem
-	 ruby
-	 rvm
-	 brew
-	 npm
-	 vundle
-	 zsh-users/zsh-syntax-highlighting
-	 gradle
-	 chucknorris
-EOBUNDLES
+antigen bundle git
+antigen bundle git-extras
+antigen bundle tmux
+antigen bundle vagrant
+antigen bundle gem
+antigen bundle ruby
+antigen bundle rvm
+antigen bundle brew
+antigen bundle npm
+antigen bundle vundle
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle gradle
+antigen bundle chucknorris
 
 antigen theme agnoster
 antigen apply
