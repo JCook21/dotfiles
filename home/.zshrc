@@ -1,22 +1,6 @@
-source ~/.homesick/repos/dotfiles/antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle git-extras
-antigen bundle tmux
-antigen bundle vagrant
-antigen bundle gem
-antigen bundle ruby
-antigen bundle rvm
-antigen bundle brew
-antigen bundle npm
-antigen bundle vundle
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle gradle
-antigen bundle chucknorris
-
-antigen theme agnoster
-antigen apply
+antigen init $HOME/.antigenrc
 
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
@@ -66,6 +50,8 @@ fi
 test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

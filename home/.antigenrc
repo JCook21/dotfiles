@@ -1,0 +1,21 @@
+antigen use oh-my-zsh
+if [ "$OSTYPE"="darwin11.0" ]; then
+    antigen bundle osx
+fi
+antigen bundles <<EOBUNDLES
+	git
+	git-extras
+	tmux
+	vagrant
+	gem
+	ruby
+	rvm
+	brew
+	npm
+	vundle
+	gradle
+	chucknorris
+EOBUNDLES
+
+antigen theme agnoster
+antigen apply
