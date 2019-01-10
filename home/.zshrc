@@ -39,8 +39,8 @@ bindkey '^R' history-incremental-search-backward
 autoload -U edit-command-line
 
 # Add support for colors in ls
-if whence ~/.homesick/repos/Dircolors >/dev/null; then
-  eval `dircolors ~/.homesick/repos/Dircolors/dircolors.256dark`
+if whence ~/dircolors >/dev/null; then
+  eval `dircolors ~/dircolors`
   zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
   alias ls='ls --color'
 else

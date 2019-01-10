@@ -1,3 +1,3 @@
 # vim:filetype=ruby
-system('ln -nfs ~/.homesick/repos/dotfiles/dircolors-solarized/dircolors.ansi-dark ~/.dircolors')
+system('ln -nfs ~/.homesick/repos/dotfiles/dircolors-solarized/dircolors.256256dark ~/.dircolors')
 system('ln -nfs ~/.homesick/repos/dotfiles/antigen/antigen.zsh ~/.antigen.zsh')
