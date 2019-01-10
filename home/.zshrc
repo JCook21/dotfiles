@@ -2,6 +2,8 @@ source /usr/local/share/antigen/antigen.zsh
 
 antigen init $HOME/.antigenrc
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
 
@@ -37,8 +39,8 @@ bindkey '^R' history-incremental-search-backward
 autoload -U edit-command-line
 
 # Add support for colors in ls
-if whence dircolors >/dev/null; then
-  eval "$(dircolors -b)"
+if whence ~/.homesick/repos/Dircolors >/dev/null; then
+  eval `dircolors ~/.homesick/repos/Dircolors/dircolors.256dark`
   zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
   alias ls='ls --color'
 else
@@ -53,3 +55,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
