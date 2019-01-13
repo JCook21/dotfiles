@@ -12,6 +12,8 @@ antigen bundles <<EOBUNDLES
 	brew
 	vundle
 	gradle
+	zsh-users/zsh-autosuggestions
+	zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
 antigen theme agnoster

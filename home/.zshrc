@@ -4,6 +4,8 @@ antigen init $HOME/.antigenrc
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+DEFAULT_USER=`whoami`
+
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
 DISABLE_AUTO_TITLE="true"
 
@@ -26,16 +28,8 @@ man() {
       man "$@"
 }
 
-# number of lines kept in history
-export HISTSIZE=1000
-# number of lines saved in the history after logout
-export SAVEHIST=1000
 # append command to history file once executed
 setopt inc_append_history
-
-export GPG_TTY=`tty`
-
-export VAGRANT_DISABLE_GUI=true
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
@@ -50,11 +44,8 @@ else
   zstyle ':completion:*:default' list-colors ''
 fi
 
-# Load in local settings from ~/.zsh_profile
-#test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -x /usr/local/bin/rbenv ]; then
+	eval "$(rbenv init -)"
+fi
