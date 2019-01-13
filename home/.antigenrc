@@ -9,12 +9,9 @@ antigen bundles <<EOBUNDLES
 	vagrant
 	gem
 	ruby
-	rvm
 	brew
-	npm
 	vundle
 	gradle
-	chucknorris
 EOBUNDLES
 
 antigen theme agnoster

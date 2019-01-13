@@ -41,8 +41,6 @@ autoload -U edit-command-line
 # Add support for colors in ls
 if whence ~/dircolors >/dev/null; then
   eval `dircolors ~/dircolors`
-  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-  alias ls='ls --color'
 else
   export CLICOLOR=1
   zstyle ':completion:*:default' list-colors ''
