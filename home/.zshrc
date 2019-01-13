@@ -33,6 +33,10 @@ export SAVEHIST=1000
 # append command to history file once executed
 setopt inc_append_history
 
+export GPG_TTY=`tty`
+
+export VAGRANT_DISABLE_GUI=true
+
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
 
