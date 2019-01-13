@@ -12,6 +12,7 @@ antigen bundles <<EOBUNDLES
 	brew
 	vundle
 	gradle
+	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
 EOBUNDLES
