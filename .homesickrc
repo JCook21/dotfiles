@@ -1,3 +1,3 @@
 # vim:filetype=ruby
 system('ln -nfs ~/.homesick/repos/dotfiles/dircolors-solarized/dircolors.256dark ~/.dircolors')
-system('ln -nfs ~/.homesick/repos/dotfiles/antigen/antigen.zsh ~/.antigen.zsh')
+system('git clone https://github.com/zsh-users/antigen.git ~/.antigen')

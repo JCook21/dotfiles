@@ -1,4 +1,4 @@
-source ~/.antigen.zsh
+source ~/.antigen/antigen.zsh
 
 antigen init $HOME/.antigenrc
 
