@@ -4,7 +4,6 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 export GPG_TTY=`tty`
 export VAGRANT_DISABLE_GUI=true
-export PYTHONPATH=$PYTHONPATH:/Users/jcook/.homesick/repos/VimConfig/powerline
 # Work specific variables
 export SCALA_HOME=/usr/local/opt/scala/idea
 export IDEA_PROPERTIES=/webdev/IDE/idea.properties
