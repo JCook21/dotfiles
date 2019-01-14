@@ -12,6 +12,8 @@ antigen bundles <<EOBUNDLES
 	brew
 	vundle
 	gradle
+	vi-mode
+	colored-man-pages
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
