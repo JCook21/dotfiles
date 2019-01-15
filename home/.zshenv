@@ -4,6 +4,7 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 export GPG_TTY=`tty`
 export VAGRANT_DISABLE_GUI=true
+export HOMEBREW_INSTALL_CLEANUP=1
 # Work specific variables
 export IDEA_PROPERTIES=/webdev/IDE/idea.properties
 export NETLEDGER_REPOSITORY_HOST=repository-kit.eng.netsuite.com
