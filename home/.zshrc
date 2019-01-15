@@ -1,7 +1,6 @@
 # Antigen config
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
-
 antigen init $HOME/.antigenrc
 
 # Ensure that /usr/local/bin has precedence over /usr/bin
