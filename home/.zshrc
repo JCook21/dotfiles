@@ -9,7 +9,7 @@ export PATH=/usr/local/bin:$PATH
 # Remove the user name from the status line.
 DEFAULT_USER=`whoami`
 
-# Disable automatic terminal title setting. This messes up Tmux if it's on.
+# Disable automatic terminal title setting. This messes up Tmux if it's on.i
 DISABLE_AUTO_TITLE="true"
 
 # Display red dots while waiting for completion.
@@ -32,10 +32,10 @@ autoload -U edit-command-line
 
 # Add support for colors in ls
 if whence ~/dircolors >/dev/null; then
-  eval `dircolors ~/dircolors`
+	eval `dircolors ~/dircolors`
 else
-  export CLICOLOR=1
-  zstyle ':completion:*:default' list-colors ''
+	export CLICOLOR=1
+	zstyle ':completion:*:default' list-colors ''
 fi
 
 # Load the iterm2 shell integration
