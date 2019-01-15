@@ -1,11 +1,13 @@
+# Antigen config
+# Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
 
 antigen init $HOME/.antigenrc
 
-fpath=(/usr/local/share/zsh-completions $fpath)
-
+# Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
 
+# Remove the user name from the status line.
 DEFAULT_USER=`whoami`
 
 # Disable automatic terminal title setting. This messes up Tmux if it's on.
@@ -26,6 +28,7 @@ bindkey '^R' history-incremental-search-backward
 # Use vim keybindings
 bindkey -v
 
+# Allow terminal commands to be edited in $EDITOR
 autoload -U edit-command-line
 
 # Add support for colors in ls
@@ -36,8 +39,10 @@ else
   zstyle ':completion:*:default' list-colors ''
 fi
 
+# Load the iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Load rbenv
 if [ -x /usr/local/bin/rbenv ]; then
 	eval "$(rbenv init -)"
 fi
