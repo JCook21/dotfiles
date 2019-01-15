@@ -1,3 +1,5 @@
 # vim:filetype=ruby
 system('ln -nfs ~/.homesick/repos/dotfiles/dircolors-solarized/dircolors.ansi-universal ~/.dircolors')
 system('git clone https://github.com/zsh-users/antigen.git ~/.antigen')
+system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
+system('vim +BundleInstall +qall')
