@@ -1,8 +1,5 @@
-" Delete all auto commands (needed to auto source .vimrc after saving)
-autocmd!
-
 """""""""""""""
-" Various options
+" Set various options
 """""""""""""""
 set mouse=a
 set nocompatible
@@ -96,6 +93,11 @@ call vundle#begin()
 	Plugin 'elzr/vim-json.git'
 call vundle#end()
 
+" Use filetype plugins
+filetype on
+filetype plugin on
+filetype indent on
+
 " Colorscheme
 colorscheme solarized
 call togglebg#map("<F12>")
@@ -112,11 +114,6 @@ runtime! ftplugin/man.vim
 
 " Use pman for manual pages
 setlocal keywordprg=pman
-
-" Use filetype plugins
-filetype on
-filetype plugin on
-filetype indent on
 
 " Use built in matchit plugin
 runtime macros/matchit.vim
@@ -165,16 +162,9 @@ autocmd BufWritePre *.{php,twig} call TrimWhiteSpace()
 " Use python to pretty format json.
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
-" Autoreload Vimrc every time it's saved.
-if has("autocmd")
-	autocmd! bufwritepost .vimrc source $MYVIMRC
-endif
-
 " Plugin settings " ================================================================================
 " Syntastic settings
-let g:syntastic_enable_signs=1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_always_populate_loc_list = 1
