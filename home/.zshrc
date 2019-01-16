@@ -30,14 +30,6 @@ bindkey -v
 # Allow terminal commands to be edited in $EDITOR
 autoload -U edit-command-line
 
-# Add support for colors in ls
-if whence ~/dircolors >/dev/null; then
-	eval `dircolors ~/dircolors`
-else
-	export CLICOLOR=1
-	zstyle ':completion:*:default' list-colors ''
-fi
-
 # Load the iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
