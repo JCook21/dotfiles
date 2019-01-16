@@ -5,6 +5,7 @@ fi
 antigen bundles <<EOBUNDLES
 	git
 	git-extras
+	gitignore
 	tmux
 	vagrant
 	gem
