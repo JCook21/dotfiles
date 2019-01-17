@@ -28,6 +28,7 @@ antigen theme agnoster
 
 antigen apply
 
+# General ZSH config
 # Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
 
