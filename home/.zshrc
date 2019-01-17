@@ -33,6 +33,8 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+
 # General ZSH config
 # Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
