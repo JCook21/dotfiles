@@ -1,3 +1,7 @@
+# Powerlevel9k theme config
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs vi_mode history time)
+
 # Antigen config
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
@@ -24,7 +28,7 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
 EOBUNDLES
-antigen theme agnoster
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
 
