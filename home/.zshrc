@@ -3,7 +3,7 @@
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 if [ "$OSTYPE"="darwin11.0" ]; then
-    antigen bundle osx
+	antigen bundle osx
 fi
 antigen bundles <<EOBUNDLES
 	git
@@ -35,7 +35,7 @@ export PATH=/usr/local/bin:$PATH
 # Remove the user name from the status line.
 DEFAULT_USER=`whoami`
 
-# Display red dots while waiting for completion.
+# Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
 #Auto title is a little weird with tmux.
@@ -46,6 +46,9 @@ setopt autocd autopushd
 
 # append command to history file once executed
 setopt inc_append_history
+
+# Offer correction options for misspelled commands.
+setopt correctall
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
