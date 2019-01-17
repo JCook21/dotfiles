@@ -1,16 +1,38 @@
 # Antigen config
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
-antigen init $HOME/.antigenrc
+antigen use oh-my-zsh
+if [ "$OSTYPE"="darwin11.0" ]; then
+    antigen bundle osx
+fi
+antigen bundles <<EOBUNDLES
+	git
+	git-extras
+	gitignore
+	tmux
+	vagrant
+	gem
+	ruby
+	brew
+	vundle
+	vi-mode
+	colored-man-pages
+	ssh-agent
+	chrissicool/zsh-256color
+	pinelibg/dircolors-solarized-zsh
+	zsh-users/zsh-completions
+	zsh-users/zsh-autosuggestions
+	zsh-users/zsh-syntax-highlighting
+EOBUNDLES
+antigen theme agnoster
+
+antigen apply
 
 # Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
 
 # Remove the user name from the status line.
 DEFAULT_USER=`whoami`
-
-# Disable automatic terminal title setting. This messes up Tmux if it's on.i
-DISABLE_AUTO_TITLE="true"
 
 # Display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -23,12 +45,6 @@ setopt inc_append_history
 
 # Keep history search with vim mode enabled.
 bindkey '^R' history-incremental-search-backward
-
-# Use vim keybindings
-bindkey -v
-
-# Allow terminal commands to be edited in $EDITOR
-autoload -U edit-command-line
 
 # Load the iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
