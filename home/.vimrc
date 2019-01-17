@@ -13,7 +13,13 @@ set nolist
 " saving them first
 set hidden
 " Show line numbers by default
-set number
+set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,CmdwinLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter,CmdwinEnter * set norelativenumber
+:augroup END
+
 " Auto indent after a {
 set autoindent
 set smartindent
