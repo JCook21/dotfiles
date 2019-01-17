@@ -38,6 +38,9 @@ DEFAULT_USER=`whoami`
 # Display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+#Auto title is a little weird with tmux.
+DISABLE_AUTO_TITLE="true"
+
 # Automatically use cd when paths are entered without cd
 setopt autocd autopushd
 
