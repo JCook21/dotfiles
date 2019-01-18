@@ -3,6 +3,7 @@
 """""""""""""""
 set mouse=a
 set nocompatible
+" Stops vim from displaying --INSERT-- at the bottom of the window.
 set noshowmode
 set shell=/usr/local/bin/zsh
 set showtabline=2
