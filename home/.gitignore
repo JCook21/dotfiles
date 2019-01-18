@@ -1,5 +1,6 @@
 *.lvimrc
 *.vim/bundle/**
+*.vim/.netrwhist
 *.swp
 *.swo
 *.swn
