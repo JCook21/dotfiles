@@ -4,7 +4,7 @@
 set mouse=a
 set nocompatible
 set noshowmode
-set shell=/bin/sh
+set shell=/usr/local/bin/zsh
 set showtabline=2
 syntax on
 set linebreak
