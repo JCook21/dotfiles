@@ -2,10 +2,8 @@
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
-if [ "$OSTYPE"="darwin11.0" ]; then
-	antigen bundle osx
-fi
 antigen bundles <<EOBUNDLES
+	osx
 	git
 	git-extras
 	gitignore
@@ -27,18 +25,22 @@ EOBUNDLES
 # Powerlevel9k theme config
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs vi_mode history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode root_indicator background_jobs command_execution_time time)
 POWERLEVEL9K_VI_INSERT_MODE_STRING=''
+POWERLEVEL9K_SHORTEN_STRATEGY='truncate_middle'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
-
 # General ZSH config
 # Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
+
+# Make the completion highlight colour more legible
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
 
 # Remove the user name from the status line.
 DEFAULT_USER=`whoami`
