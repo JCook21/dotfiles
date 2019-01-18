@@ -82,6 +82,7 @@ call vundle#begin()
 	Plugin 'tobyS/skeletons.vim'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
+	Plugin 'tpope/vim-unimpaired'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'arnaud-lb/vim-php-namespace'
 	Plugin 'stephpy/vim-php-cs-fixer'
