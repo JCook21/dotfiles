@@ -5,7 +5,9 @@ A collection of dotfiles.
 ## Installation
 
 This project uses [homesick] (https://github.com/technicalpickles/homesick) to manage the dotfiles it contains. Once you've installed homesick add this repository using 'homesick clone'. To finish installation run:
-```zsh  
+```zsh
+# Install a nerd font to get the custom ligatures.
+brew cask install font-inconsolata-nerd-font
 homesick link dotfiles
 homesick rc dotfiles
 ```

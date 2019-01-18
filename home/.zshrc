@@ -26,6 +26,7 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 # Powerlevel9k theme config
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs vi_mode history time)
 POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 

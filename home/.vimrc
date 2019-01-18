@@ -97,6 +97,9 @@ call vundle#begin()
 	Plugin 'tmux-plugins/vim-tmux'
 	Plugin 'othree/html5-syntax.vim'
 	Plugin 'elzr/vim-json.git'
+	" Vim-Devicons should be loaded last to avoid issues with
+	" otherplugins.
+	Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
 
 " Use filetype plugins
