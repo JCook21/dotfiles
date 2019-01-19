@@ -83,7 +83,7 @@ call vundle#begin()
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
 	Plugin 'tpope/vim-unimpaired'
-	Plugin 'scrooloose/syntastic'
+	Plugin 'w0rp/ale'
 	Plugin 'arnaud-lb/vim-php-namespace'
 	Plugin 'stephpy/vim-php-cs-fixer'
 	Plugin 'vim-airline/vim-airline'
@@ -160,23 +160,21 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-" Trims whitespace in a file.
-function! TrimWhiteSpace()
-	%s/\s\+$//e
-endfunction
-autocmd BufWritePre *.{php,twig} call TrimWhiteSpace()
 
 " Use python to pretty format json.
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Plugin settings " ================================================================================
-" Syntastic settings
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_php_checkers=['php', 'phpmd', 'phpcs']
+" ALE settings
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:ale_fixers = {
+\	'*': ['remove_trailing_lines', 'trim_whitespace'],
+\	'ruby': ['rubocop', 'rufo', 'standardrb'],
+\}
+let g:ale_fix_on_save = 1
+highlight link ALEWarning       Normal
+highlight link ALEWarningSign      Search
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
@@ -193,8 +191,9 @@ let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type= 1
 let g:airline#extensions#tabline#show_tab_type = 1
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = '  '
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
-
