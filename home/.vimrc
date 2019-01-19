@@ -66,9 +66,12 @@ if $TERM =~ '^screen-256color'
 endif
 
 """"""""""""""""""""
-" Vundle config
-" Plugins installed by Vundle
+" Plugin config
 """""""""""""""""""
+packadd! matchit
+
+" Plugins installed by Vundle
+" Vundle config
 " Vundle requires filetype plugin to be off while plugins are loaded
 filetype off
 
