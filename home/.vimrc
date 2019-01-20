@@ -91,6 +91,7 @@ call vundle#begin()
 	Plugin 'stephpy/vim-php-cs-fixer'
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'terryma/vim-multiple-cursors'
 	" Syntax highlighting
 	Plugin 'altercation/vim-colors-solarized'
 	Plugin 'StanAngeloff/php.vim'
