@@ -80,8 +80,6 @@ call vundle#begin()
 	" Plugins
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'SirVer/ultisnips'
-	Plugin 'tobyS/pdv'
-	Plugin 'tobyS/vmustache'
 	Plugin 'tobyS/skeletons.vim'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
@@ -150,12 +148,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " Switch paste mode off whenever insert mode is left
 autocmd InsertLeave <buffer> set nopaste
-
-" Reads the skeleton php file
-" TODO: How can this be moved out of this file?
-" Note: The normal command afterwards deletes an ugly pending line and moves
-" the cursor to the middle of the file.
-autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdda
 
 " Highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
