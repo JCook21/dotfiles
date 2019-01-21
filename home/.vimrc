@@ -190,6 +190,7 @@ let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = ' '
 let g:airline#extensions#ale#warning_symbol = '  '
+let g:airline#extensions#fugitiveline#enabled = 1
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
