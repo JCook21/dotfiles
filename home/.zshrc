@@ -5,18 +5,16 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 	osx
 	git
-	git-extras
 	gitignore
 	tmux
+	history
 	vagrant
 	gem
-	ruby
 	brew
 	vundle
 	vi-mode
 	colored-man-pages
 	ssh-agent
-	chrissicool/zsh-256color
 	pinelibg/dircolors-solarized-zsh
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
