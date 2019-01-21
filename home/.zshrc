@@ -53,13 +53,11 @@ DISABLE_AUTO_TITLE="true"
 setopt autocd autopushd
 
 # append command to history file once executed
-setopt inc_append_history
+setopt incappendhistory
+HISTDUP=erase
 
 # Offer correction options for misspelled commands.
 setopt correctall
-
-# Keep history search with vim mode enabled.
-bindkey '^R' history-incremental-search-backward
 
 # Load the iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
