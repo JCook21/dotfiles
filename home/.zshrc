@@ -8,6 +8,7 @@ antigen bundles <<EOBUNDLES
 	git-extras
 	gitignore
 	tmux
+	history
 	vagrant
 	gem
 	ruby
