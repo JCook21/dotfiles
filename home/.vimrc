@@ -1,3 +1,41 @@
+""""""""""""""""""""
+" Plugin config
+"""""""""""""""""""
+packadd! matchit
+
+" Plugins installed by Vundle
+" Vundle config
+" Vundle requires filetype plugin to be off while plugins are loaded
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	" Plugins
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'SirVer/ultisnips'
+	Plugin 'tobyS/skeletons.vim'
+	Plugin 'tpope/vim-fugitive'
+	Plugin 'tpope/vim-surround'
+	Plugin 'tpope/vim-unimpaired'
+	Plugin 'w0rp/ale'
+	Plugin 'arnaud-lb/vim-php-namespace'
+	Plugin 'stephpy/vim-php-cs-fixer'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'terryma/vim-multiple-cursors'
+	Plugin 'ctrlpvim/ctrlp.vim'
+	" Syntax highlighting
+	Plugin 'altercation/vim-colors-solarized'
+	Plugin 'StanAngeloff/php.vim'
+	Plugin 'vim-ruby/vim-ruby'
+	Plugin 'tmux-plugins/vim-tmux'
+	Plugin 'othree/html5-syntax.vim'
+	Plugin 'elzr/vim-json.git'
+	" Vim-Devicons should be loaded last to avoid issues with
+	" otherplugins.
+	Plugin 'ryanoasis/vim-devicons'
+call vundle#end()
+
 """""""""""""""
 " Set various options
 """""""""""""""
@@ -64,43 +102,6 @@ if $TERM =~ '^screen-256color'
 	map <Esc>OF <End>
 	map! <Esc>OF <End>
 endif
-
-""""""""""""""""""""
-" Plugin config
-"""""""""""""""""""
-packadd! matchit
-
-" Plugins installed by Vundle
-" Vundle config
-" Vundle requires filetype plugin to be off while plugins are loaded
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-	" Plugins
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'SirVer/ultisnips'
-	Plugin 'tobyS/skeletons.vim'
-	Plugin 'tpope/vim-fugitive'
-	Plugin 'tpope/vim-surround'
-	Plugin 'tpope/vim-unimpaired'
-	Plugin 'w0rp/ale'
-	Plugin 'arnaud-lb/vim-php-namespace'
-	Plugin 'stephpy/vim-php-cs-fixer'
-	Plugin 'vim-airline/vim-airline'
-	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'terryma/vim-multiple-cursors'
-	" Syntax highlighting
-	Plugin 'altercation/vim-colors-solarized'
-	Plugin 'StanAngeloff/php.vim'
-	Plugin 'vim-ruby/vim-ruby'
-	Plugin 'tmux-plugins/vim-tmux'
-	Plugin 'othree/html5-syntax.vim'
-	Plugin 'elzr/vim-json.git'
-	" Vim-Devicons should be loaded last to avoid issues with
-	" otherplugins.
-	Plugin 'ryanoasis/vim-devicons'
-call vundle#end()
 
 " Use filetype plugins
 filetype on
@@ -191,6 +192,9 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = ' '
 let g:airline#extensions#ale#warning_symbol = '  '
 let g:airline#extensions#fugitiveline#enabled = 1
+
+" CtrlP Plugin
+let g:ctrlp_show_hidden = 1
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
