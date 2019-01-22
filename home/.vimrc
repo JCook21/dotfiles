@@ -17,6 +17,7 @@ call vundle#begin()
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
 	Plugin 'tpope/vim-unimpaired'
+	Plugin 'tpope/vim-repeat'
 	Plugin 'w0rp/ale'
 	Plugin 'arnaud-lb/vim-php-namespace'
 	Plugin 'stephpy/vim-php-cs-fixer'
