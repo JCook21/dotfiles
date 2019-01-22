@@ -92,17 +92,6 @@ set background=dark
 " Keep all swapfiles in a central location
 set directory^=$HOME/.vim/swapfiles//
 
-""""""""""""""
-" tmux fixes "
-" """"""""""""""
-" Handle tmux $TERM quirks in vim
-if $TERM =~ '^screen-256color'
-	map <Esc>OH <Home>
-	map! <Esc>OH <Home>
-	map <Esc>OF <End>
-	map! <Esc>OF <End>
-endif
-
 " Use filetype plugins
 filetype on
 filetype plugin on
@@ -157,9 +146,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-" Use python to pretty format json.
-map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Plugin settings " ================================================================================
 " ALE settings
