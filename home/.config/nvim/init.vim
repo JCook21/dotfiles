@@ -1,11 +1,10 @@
 """"""""""""""""""""
 " Plugin config
+" Uses vim-plug to manage plugins
 """""""""""""""""""
-
 call plug#begin('~/.local/share/nvim/plugged')
 	" Plugins
 	Plug 'VundleVim/Vundle.vim'
-	Plug 'tobyS/skeletons.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
@@ -18,14 +17,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ctrlpvim/ctrlp.vim'
 	" Syntax highlighting
-	Plug 'altercation/vim-colors-solarized'
+	Plug 'iCyMind/NeoSolarized'
 	Plug 'StanAngeloff/php.vim', { 'for': 'php'}
 	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby'}
 	Plug 'tmux-plugins/vim-tmux'
 	Plug 'othree/html5-syntax.vim'
 	Plug 'elzr/vim-json', { 'for': 'json' }
-	" Vim-Devicons should be loaded last to avoid issues with
-	" otherplugins.
+	" Vim-Devicons should be loaded last to avoid issues with otherplugins.
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
@@ -33,19 +31,19 @@ call plug#end()
 " Set various options
 """""""""""""""
 set mouse=a
-set nocompatible
 " Stops vim from displaying --INSERT-- at the bottom of the window.
 set noshowmode
-set shell=/usr/local/bin/zsh
-set showtabline=2
-syntax on
 set linebreak
 set nolist
 " Set the hidden option to enable moving through args and buffers without
 " saving them first
 set hidden
 " Show line numbers by default
+" This displays the absolute line number for the current line and relative
+" numbers for all others.
 set number relativenumber
+" Clear relative numbers under some circumstances, specifically entering
+" insert mode.
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave,CmdwinLeave * set relativenumber
@@ -53,46 +51,28 @@ set number relativenumber
 :augroup END
 
 " Auto indent after a {
-set autoindent
 set smartindent
 " Enable folding by fold markers
 set foldmethod=marker
 " Autoclose folds, when moving out of them
 set foldclose=all
-" Use incremental searching
-set incsearch
 " Jump 5 lines when running out of the screen
 set scrolljump=5
 " Indicate jump out of the screen when 3 lines before end of the screen
 set scrolloff=3
-" Repair wired terminal/vim settings
-set backspace=start,eol,indent
-" Allow file inline modelines to provide settings
-set modeline
-" Toggle paste with <ins>
-set pastetoggle=<ins>
 " Show large "menu" with auto completion options
-set wildmenu
 set wildmode=list:longest
-set ttyfast
-" Save more commands in history
-set history=200
-set laststatus=2
-set encoding=utf-8
 " Fugitive vertical splits in diffs
 set diffopt+=vertical
-set background=dark
-" Keep all swapfiles in a central location
-set directory^=$HOME/.vim/swapfiles//
+" Clear search highlights when pressing esc
+nnoremap <esc> :noh<return><esc>
 
 " Use filetype plugins
 filetype on
 filetype plugin on
-filetype indent on
 
 " Colorscheme
-colorscheme solarized
-call togglebg#map("<F12>")
+colorscheme NeoSolarized
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * set nocursorline
@@ -104,22 +84,12 @@ cnoremap w!! w !sudo tee % >/dev/null
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
 
-" Use pman for manual pages
-setlocal keywordprg=pman
-
 " Filetype settings
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType twig setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
-autocmd FileType ruby compiler ruby
 
 au BufRead,BufNewFile *.phps set filetype=php
 
