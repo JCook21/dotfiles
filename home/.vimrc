@@ -2,40 +2,38 @@
 " Plugin config
 """""""""""""""""""
 packadd! matchit
-
-" Plugins installed by Vundle
-" Vundle config
-" Vundle requires filetype plugin to be off while plugins are loaded
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
 	" Plugins
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'SirVer/ultisnips'
-	Plugin 'tobyS/skeletons.vim'
-	Plugin 'tpope/vim-fugitive'
-	Plugin 'tpope/vim-surround'
-	Plugin 'tpope/vim-unimpaired'
-	Plugin 'tpope/vim-repeat'
-	Plugin 'w0rp/ale'
-	Plugin 'arnaud-lb/vim-php-namespace'
-	Plugin 'stephpy/vim-php-cs-fixer'
-	Plugin 'vim-airline/vim-airline'
-	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'terryma/vim-multiple-cursors'
-	Plugin 'ctrlpvim/ctrlp.vim'
+	Plug 'VundleVim/Vundle.vim'
+	Plug 'SirVer/ultisnips'
+	Plug 'tobyS/skeletons.vim'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'tpope/vim-repeat'
+	Plug 'w0rp/ale'
+	Plug 'arnaud-lb/vim-php-namespace'
+	Plug 'stephpy/vim-php-cs-fixer'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'terryma/vim-multiple-cursors'
+	Plug 'ctrlpvim/ctrlp.vim'
 	" Syntax highlighting
-	Plugin 'altercation/vim-colors-solarized'
-	Plugin 'StanAngeloff/php.vim'
-	Plugin 'vim-ruby/vim-ruby'
-	Plugin 'tmux-plugins/vim-tmux'
-	Plugin 'othree/html5-syntax.vim'
-	Plugin 'elzr/vim-json.git'
+	Plug 'altercation/vim-colors-solarized'
+	Plug 'StanAngeloff/php.vim'
+	Plug 'vim-ruby/vim-ruby'
+	Plug 'tmux-plugins/vim-tmux'
+	Plug 'othree/html5-syntax.vim'
+	Plug 'elzr/vim-json.git'
 	" Vim-Devicons should be loaded last to avoid issues with
 	" otherplugins.
-	Plugin 'ryanoasis/vim-devicons'
-call vundle#end()
+	Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 """""""""""""""
 " Set various options
