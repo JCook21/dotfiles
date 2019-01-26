@@ -23,7 +23,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby'}
 	Plug 'tmux-plugins/vim-tmux'
 	Plug 'othree/html5-syntax.vim'
-	Plug 'elzr/vim-json.git', { 'for': 'json' }
+	Plug 'elzr/vim-json', { 'for': 'json' }
 	" Vim-Devicons should be loaded last to avoid issues with
 	" otherplugins.
 	Plug 'ryanoasis/vim-devicons'
