@@ -11,7 +11,6 @@ antigen bundles <<EOBUNDLES
 	vagrant
 	gem
 	brew
-	vundle
 	vi-mode
 	colored-man-pages
 	ssh-agent

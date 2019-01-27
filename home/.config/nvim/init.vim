@@ -116,8 +116,7 @@ let g:ale_fixers = {
 \	'ruby': ['rubocop', 'standardrb'],
 \}
 let g:ale_fix_on_save = 1
-highlight link ALEWarning       Normal
-highlight link ALEWarningSign      Search
+let g:ale_set_quickfix = 1
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
