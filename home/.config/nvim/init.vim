@@ -16,6 +16,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Syntax highlighting
 	Plug 'iCyMind/NeoSolarized'
 	Plug 'StanAngeloff/php.vim', { 'for': 'php'}
@@ -143,3 +144,6 @@ let g:ctrlp_show_hidden = 1
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
