@@ -19,6 +19,7 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
+	zsh-users/zsh-history-substring-search
 EOBUNDLES
 # Powerlevel9k theme config
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
@@ -58,6 +59,12 @@ HISTDUP=erase
 
 # Offer correction options for misspelled commands.
 setopt correctall
+
+# Use history searching with up and down arrows
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+setopt HIST_IGNORE_ALL_DUPS
 
 # Load the iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
