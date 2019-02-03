@@ -16,7 +16,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Syntax highlighting
 	Plug 'iCyMind/NeoSolarized'
@@ -92,6 +92,8 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
+
+au BufRead,BufNewFile *.txt		set filetype=txt
 
 au BufRead,BufNewFile *.phps set filetype=php
 

@@ -5,29 +5,27 @@ packadd! matchit
 call plug#begin('~/.vim/plugged')
 	" Plugins
 	Plug 'VundleVim/Vundle.vim'
-	Plug 'SirVer/ultisnips'
-	Plug 'tobyS/skeletons.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
 	Plug 'w0rp/ale'
-	Plug 'arnaud-lb/vim-php-namespace'
-	Plug 'stephpy/vim-php-cs-fixer'
+	Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php'}
+	Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'}
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
-	Plug 'scrooloose/nerdtree'
 	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Syntax highlighting
-	Plug 'altercation/vim-colors-solarized'
-	Plug 'StanAngeloff/php.vim'
-	Plug 'vim-ruby/vim-ruby'
+	Plug 'iCyMind/NeoSolarized'
+	Plug 'StanAngeloff/php.vim', { 'for': 'php'}
+	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby'}
 	Plug 'tmux-plugins/vim-tmux'
 	Plug 'othree/html5-syntax.vim'
-	Plug 'elzr/vim-json.git'
-	" Vim-Devicons should be loaded last to avoid issues with
-	" otherplugins.
+	Plug 'elzr/vim-json', { 'for': 'json' }
+	" Vim-Devicons should be loaded last to avoid issues with otherplugins.
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
@@ -125,6 +123,8 @@ autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType ruby compiler ruby
+
+au BufRead,BufNewFile *.txt		set filetype=txt
 
 au BufRead,BufNewFile *.phps set filetype=php
 
