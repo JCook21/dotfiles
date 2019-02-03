@@ -93,17 +93,17 @@ autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
 
-au BufRead,BufNewFile *.txt		set filetype=txt
+au BufRead,BufNewFile *.txt set filetype=txt
 
 au BufRead,BufNewFile *.phps set filetype=php
+
+" Associate .md files with markdown.
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " Source templates for filetype
 augroup templates
 	autocmd BufNewFile *.php 0r ~/.vim/skeletons/skeleton.php
 augroup END
-
-" Associate .md files with markdown.
-au BufRead,BufNewFile *.md set filetype=markdown
 
 " Switch paste mode off whenever insert mode is left
 autocmd InsertLeave <buffer> set nopaste
