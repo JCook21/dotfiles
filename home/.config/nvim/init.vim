@@ -97,6 +97,11 @@ au BufRead,BufNewFile *.txt		set filetype=txt
 
 au BufRead,BufNewFile *.phps set filetype=php
 
+" Source templates for filetype
+augroup templates
+	autocmd BufNewFile *.php 0r ~/.vim/skeletons/skeleton.php
+augroup END
+
 " Associate .md files with markdown.
 au BufRead,BufNewFile *.md set filetype=markdown
 
