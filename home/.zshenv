@@ -6,6 +6,6 @@ export GPG_TTY=`tty`
 export HOMEBREW_INSTALL_CLEANUP=1
 if type nvim > /dev/null 2>&1; then
 	alias vim='nvim'
-	alias vi-'nvim'
+	alias vi='nvim'
 	alias oldvim='vim'
 fi
