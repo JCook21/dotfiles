@@ -2,11 +2,6 @@
 " Plugin config
 """""""""""""""""""
 packadd! matchit
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
 call plug#begin('~/.vim/plugged')
 	" Plugins
 	Plug 'VundleVim/Vundle.vim'
@@ -22,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
+	Plug 'scrooloose/nerdtree'
 	Plug 'ctrlpvim/ctrlp.vim'
 	" Syntax highlighting
 	Plug 'altercation/vim-colors-solarized'
@@ -183,3 +179,19 @@ let g:ctrlp_show_hidden = 1
 
 " JSON syntax plugin
 let g:vim_json_syntax_conceal = 0
+
+" NERDTree
+" Open NERDTree automatically if vim is started with no arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Open NERDTree automatically id vim is opened with a path which is a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" Automatically quit vim if the last tab open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Close NERDTree when opening a file
+let NERDTreeQuitOnOpen = 1
+" When deleting a file with NERDTree also delete the buffer in vim
+let NERDTreeAutoDeleteBuffer = 1
+" Use CTRL-t to toggle NERDTree
+map <C-t> :NERDTreeToggle<CR>
