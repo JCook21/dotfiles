@@ -4,7 +4,6 @@
 packadd! matchit
 call plug#begin('~/.vim/plugged')
 	" Plugins
-	Plug 'VundleVim/Vundle.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
@@ -32,6 +31,8 @@ call plug#end()
 """""""""""""""
 " Set various options
 """""""""""""""
+" Colorscheme
+colorscheme NeoSolarized
 set mouse=a
 set nocompatible
 " Stops vim from displaying --INSERT-- at the bottom of the window.
@@ -89,10 +90,6 @@ set directory^=$HOME/.vim/swapfiles//
 filetype on
 filetype plugin on
 filetype indent on
-
-" Colorscheme
-colorscheme solarized
-call togglebg#map("<F12>")
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * set nocursorline

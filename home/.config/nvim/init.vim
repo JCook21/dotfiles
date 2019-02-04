@@ -4,7 +4,6 @@
 """""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 	" Plugins
-	Plug 'VundleVim/Vundle.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
