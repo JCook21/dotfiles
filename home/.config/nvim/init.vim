@@ -45,11 +45,11 @@ set hidden
 set number relativenumber
 " Clear relative numbers under some circumstances, specifically entering
 " insert mode.
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave,CmdwinLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter,CmdwinEnter * set norelativenumber
-:augroup END
+augroup numbertoggle
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave,CmdwinLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter,CmdwinEnter * set norelativenumber
+augroup END
 
 " Auto indent after a {
 set smartindent
