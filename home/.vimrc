@@ -183,17 +183,16 @@ let g:ctrlp_show_hidden = 1
 let g:vim_json_syntax_conceal = 0
 
 " NERDTree
-" Open NERDTree automatically if vim is started with no arguments
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" Open NERDTree automatically id vim is opened with a path which is a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-" Automatically quit vim if the last tab open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Close NERDTree when opening a file
 let NERDTreeQuitOnOpen = 1
 " When deleting a file with NERDTree also delete the buffer in vim
 let NERDTreeAutoDeleteBuffer = 1
 " Use CTRL-t to toggle NERDTree
 map <C-t> :NERDTreeToggle<CR>
+" Open NERDTree automatically if vim is started with no arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'NERDTree' | endif
+" Open NERDTree automatically if vim is opened with a path which is a directory
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" Automatically quit vim if the last tab open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
