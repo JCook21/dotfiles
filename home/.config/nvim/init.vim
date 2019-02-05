@@ -17,6 +17,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'pangloss/vim-javascript', { 'for': 'js' }
+	Plug 'mxw/vim-jsx', { 'for': ['js', 'jsx'] }
 	" Syntax highlighting
 	Plug 'iCyMind/NeoSolarized'
 	Plug 'StanAngeloff/php.vim', { 'for': 'php'}
@@ -89,6 +91,8 @@ runtime! ftplugin/man.vim
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
 
@@ -122,6 +126,7 @@ let g:ale_sign_warning = ''
 let g:ale_fixers = {
 \	'*': ['remove_trailing_lines', 'trim_whitespace'],
 \	'ruby': ['rubocop', 'standardrb'],
+\	'javascript': ['eslint', 'prettier'],
 \}
 let g:ale_fix_on_save = 1
 
