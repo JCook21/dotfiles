@@ -127,6 +127,7 @@ let g:ale_fixers = {
 \	'*': ['remove_trailing_lines', 'trim_whitespace'],
 \	'ruby': ['rubocop', 'standardrb'],
 \	'javascript': ['eslint', 'prettier'],
+\	'php': ['php_cs_fixer', 'phpcbf'],
 \}
 let g:ale_fix_on_save = 1
 

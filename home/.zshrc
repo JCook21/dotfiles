@@ -14,6 +14,8 @@ antigen bundles <<EOBUNDLES
 	vi-mode
 	colored-man-pages
 	ssh-agent
+	composer
+	jessarcher/zsh-artisan
 	chrissicool/zsh-256color
 	pinelibg/dircolors-solarized-zsh
 	zsh-users/zsh-completions
