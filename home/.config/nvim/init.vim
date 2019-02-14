@@ -26,6 +26,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tmux-plugins/vim-tmux'
 	Plug 'othree/html5-syntax.vim'
 	Plug 'elzr/vim-json', { 'for': 'json' }
+	Plug 'xsbeats/vim-blade', { 'for': 'blade.php' }
 	" Vim-Devicons should be loaded last to avoid issues with otherplugins.
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -93,6 +94,7 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType markdown set spell
 autocmd FileType crontab setlocal nobackup nowritebackup
 
@@ -128,6 +130,10 @@ let g:ale_fixers = {
 \	'ruby': ['rubocop', 'standardrb'],
 \	'javascript': ['eslint', 'prettier'],
 \	'php': ['php_cs_fixer', 'phpcbf'],
+\}
+let g:ale_pattern_options = {
+\   '.*\.json$': {'ale_enabled': 0},
+\   '.*\.blade\.php$': {'ale_enabled': 0},
 \}
 let g:ale_fix_on_save = 1
 
