@@ -4,6 +4,8 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 	osx
+	bundler
+	npm
 	git
 	gitignore
 	tmux
