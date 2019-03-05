@@ -18,6 +18,7 @@ antigen bundles <<EOBUNDLES
 	ssh-agent
 	composer
 	docker
+	ruby
 	jessarcher/zsh-artisan
 	chrissicool/zsh-256color
 	pinelibg/dircolors-solarized-zsh
