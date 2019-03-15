@@ -13,3 +13,5 @@
 	helper = osxkeychain
 [advice]
 	ignoredHook = false
+[branch]
+	autoSetupMerge = always
