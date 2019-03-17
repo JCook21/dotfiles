@@ -6,13 +6,5 @@
 *.swp
 *.swo
 *.swn
-.gradle/
-.idea/
-**/*.ipr
-**/*.iws
-**/*.iml
-gradle/
-gradlew
-gradlew.bat
-build/
+*/phpinfo.php
 .DS_Store

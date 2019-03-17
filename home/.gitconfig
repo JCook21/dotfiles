@@ -14,4 +14,4 @@
 [advice]
 	ignoredHook = false
 [branch]
-	autoSetupMerge = always
+	autoSetupRebase = always
