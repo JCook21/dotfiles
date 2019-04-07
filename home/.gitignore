@@ -7,4 +7,5 @@
 *.swo
 *.swn
 */phpinfo.php
+*.php_cs.cache
 .DS_Store

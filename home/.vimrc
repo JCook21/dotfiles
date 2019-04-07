@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tmux-plugins/vim-tmux'
 	Plug 'othree/html5-syntax.vim'
 	Plug 'elzr/vim-json', { 'for': 'json' }
+	Plug 'elixir-editors/vim-elixir', { 'for': [ 'ex', 'exs' ] }
 	" Vim-Devicons should be loaded last to avoid issues with otherplugins.
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()

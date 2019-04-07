@@ -17,16 +17,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'pangloss/vim-javascript', { 'for': 'js' }
-	Plug 'mxw/vim-jsx', { 'for': ['js', 'jsx'] }
-	" Syntax highlighting
+	Plug 'ludovicchabant/vim-gutentags'
+	" Syntax highlighting and language help
 	Plug 'iCyMind/NeoSolarized'
-	Plug 'StanAngeloff/php.vim', { 'for': 'php'}
-	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby'}
+	Plug 'sheerun/vim-polyglot'
 	Plug 'tmux-plugins/vim-tmux'
-	Plug 'othree/html5-syntax.vim'
-	Plug 'elzr/vim-json', { 'for': 'json' }
-	Plug 'xsbeats/vim-blade', { 'for': 'blade.php' }
+	Plug 'slashmili/alchemist.vim'
 	" Vim-Devicons should be loaded last to avoid issues with otherplugins.
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -122,6 +118,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Plugin settings " ================================================================================
+" gutentags
+let g:gutentags_cache_dir = '~/.tags_cache'
+
 " ALE settings
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
@@ -131,11 +130,15 @@ let g:ale_fixers = {
 \	'javascript': ['eslint', 'prettier'],
 \	'php': ['php_cs_fixer', 'phpcbf'],
 \}
+let g:ale_fixers.elixir = ['mix_format']
 let g:ale_pattern_options = {
 \   '.*\.json$': {'ale_enabled': 0},
 \   '.*\.blade\.php$': {'ale_enabled': 0},
 \}
 let g:ale_fix_on_save = 1
+let g:ale_linters = {'esx': ['elixir-ls', 'credo', 'mix_format']}
+let g:ale_linters.elixir = ['elixir-ls', 'credo', 'mix_format']
+let g:ale_elixir_elixir_ls_release = '/Users/jcook/Code/redfour/elixir-ls/rel'
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
@@ -165,6 +168,8 @@ let g:vim_json_syntax_conceal = 0
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+" Use tab for completion
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " NERDTree
 " Close NERDTree when opening a file
