@@ -8,6 +8,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-endwise'
 	Plug 'w0rp/ale'
 	Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php'}
 	Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'}

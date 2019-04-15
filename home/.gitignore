@@ -9,3 +9,8 @@
 */phpinfo.php
 *.php_cs.cache
 .DS_Store
+*.idea
+*.phpunit.result.cache
+*tests/.phpunit.result.cache
+*tests/Assertions/.phpunit.result.cache
+*tests/Messages/.phpunit.result.cache
