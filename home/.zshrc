@@ -21,7 +21,6 @@ antigen bundles <<EOBUNDLES
 	ruby
 	jessarcher/zsh-artisan
 	chrissicool/zsh-256color
-	pinelibg/dircolors-solarized-zsh
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
