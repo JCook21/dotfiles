@@ -5,8 +5,6 @@ export HISTFILESIZE=1000
 export GPG_TTY=`tty`
 export HOMEBREW_INSTALL_CLEANUP=1
 export JAVA_HOME=`/usr/libexec/java_home`
-if type nvim > /dev/null 2>&1; then
-	alias vim='nvim'
-	alias vi='nvim'
-	alias oldvim='vim'
-fi
+alias vim='nvim'
+alias vi='nvim'
+alias oldvim='vim'

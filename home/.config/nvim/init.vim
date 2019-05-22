@@ -18,7 +18,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'ludovicchabant/vim-gutentags'
 	" Syntax highlighting and language help
 	Plug 'iCyMind/NeoSolarized'
 	Plug 'sheerun/vim-polyglot'
@@ -119,27 +118,33 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Plugin settings " ================================================================================
-" gutentags
-let g:gutentags_cache_dir = '~/.tags_cache'
-
 " ALE settings
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
+let g:jsx_ext_required = 0
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'esx': ['elixir-ls', 'credo', 'mix_format'],
+\   'ex': ['elixir-ls', 'credo', 'mix_format'],
+\   'rust': ['rls']
+\}
 let g:ale_fixers = {
 \	'*': ['remove_trailing_lines', 'trim_whitespace'],
 \	'ruby': ['rubocop', 'standardrb'],
-\	'javascript': ['eslint', 'prettier'],
+\	'javascript': ['eslint'],
 \	'php': ['php_cs_fixer', 'phpcbf'],
 \}
-let g:ale_fixers.elixir = ['mix_format']
 let g:ale_pattern_options = {
 \   '.*\.json$': {'ale_enabled': 0},
 \   '.*\.blade\.php$': {'ale_enabled': 0},
 \}
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'esx': ['elixir-ls', 'credo', 'mix_format']}
-let g:ale_linters.elixir = ['elixir-ls', 'credo', 'mix_format']
-let g:ale_elixir_elixir_ls_release = '/Users/jcook/Code/redfour/elixir-ls/rel'
+let g:ale_rust_rls_config = {
+\   'rust': {
+\     'clippy_preference': 'on'
+\   }
+\ }
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
@@ -169,6 +174,7 @@ let g:vim_json_syntax_conceal = 0
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {'_': ['ale']}
 " Use tab for completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
