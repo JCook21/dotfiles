@@ -66,6 +66,9 @@ HISTDUP=erase
 # Offer correction options for misspelled commands.
 setopt correctall
 
+# Allow aliases to appear for tab completion
+setopt no_complete_aliases
+
 # Use history searching with up and down arrows
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -82,3 +85,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [ -x /usr/local/bin/rbenv ]; then
 	eval "$(rbenv init -)"
 fi
+
+# added by travis gem
+[ -f /Users/jcook/.travis/travis.sh ] && source /Users/jcook/.travis/travis.sh
