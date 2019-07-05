@@ -36,7 +36,7 @@ POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_middle'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
-antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme romkatv/powerlevel10k
 
 antigen apply
 
