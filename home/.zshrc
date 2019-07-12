@@ -77,14 +77,3 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Use Shift-Tab to go backwards through completion suggestions
 bindkey '^[[Z' reverse-menu-complete
-
-# Load the iterm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Load rbenv
-if [ -x /usr/local/bin/rbenv ]; then
-	eval "$(rbenv init -)"
-fi
-
-# added by travis gem
-[ -f /Users/jcook/.travis/travis.sh ] && source /Users/jcook/.travis/travis.sh
