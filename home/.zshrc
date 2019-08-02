@@ -7,6 +7,7 @@ antigen bundles <<EOBUNDLES
 	bundler
 	npm
 	nvm
+	node
 	git
 	gitignore
 	tmux
@@ -20,6 +21,7 @@ antigen bundles <<EOBUNDLES
 	composer
 	docker
 	ruby
+	jsontools
 	jessarcher/zsh-artisan
 	chrissicool/zsh-256color
 	zsh-users/zsh-completions
@@ -59,15 +61,15 @@ DISABLE_AUTO_TITLE="true"
 # Automatically use cd when paths are entered without cd
 setopt autocd autopushd
 
+# Allow completion for aliases
+setopt no_complete_aliases
+
 # append command to history file once executed
 setopt incappendhistory
 HISTDUP=erase
 
 # Offer correction options for misspelled commands.
 setopt correctall
-
-# Allow aliases to appear for tab completion
-setopt no_complete_aliases
 
 # Use history searching with up and down arrows
 zmodload zsh/terminfo
