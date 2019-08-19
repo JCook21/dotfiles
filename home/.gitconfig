@@ -15,3 +15,5 @@
 	ignoredHook = false
 [branch]
 	autoSetupRebase = always
+[pull]
+	default = current
