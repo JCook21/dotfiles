@@ -33,10 +33,9 @@ EOBUNDLES
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode command_execution_time time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode command_execution_time nvm time)
 POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_middle'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
 antigen theme romkatv/powerlevel10k
 
@@ -79,3 +78,6 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Use Shift-Tab to go backwards through completion suggestions
 bindkey '^[[Z' reverse-menu-complete
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

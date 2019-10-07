@@ -82,7 +82,7 @@ set history=200
 set laststatus=2
 set encoding=utf-8
 " Fugitive vertical splits in diffs
-set diffopt+=vertical
+" set diffopt+=vertical
 set background=dark
 " Keep all swapfiles in a central location
 set directory^=$HOME/.vim/swapfiles//
