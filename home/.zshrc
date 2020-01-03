@@ -28,6 +28,7 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-history-substring-search
+	MichaelAquilina/zsh-you-should-use
 EOBUNDLES
 # Powerlevel9k theme config
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
@@ -44,6 +45,9 @@ antigen apply
 # General ZSH config
 # Ensure that /usr/local/bin has precedence over /usr/bin
 export PATH=/usr/local/bin:$PATH
+
+# Display alias suggestions after the output of the command
+export YSU_MESSAGE_POSITION="after"
 
 # Make the completion highlight colour more legible
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
