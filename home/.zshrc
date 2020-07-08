@@ -1,6 +1,8 @@
 # Antigen config
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
 antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 	osx
@@ -18,6 +20,7 @@ antigen bundles <<EOBUNDLES
 	vi-mode
 	colored-man-pages
 	ssh-agent
+	gpg-agent
 	composer
 	docker
 	ruby
@@ -29,6 +32,7 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-history-substring-search
 	MichaelAquilina/zsh-you-should-use
+	lukechilds/zsh-nvm
 EOBUNDLES
 # Powerlevel9k theme config
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
@@ -44,7 +48,7 @@ antigen apply
 
 # General ZSH config
 # Ensure that /usr/local/bin has precedence over /usr/bin
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Display alias suggestions after the output of the command
 export YSU_MESSAGE_POSITION="after"
