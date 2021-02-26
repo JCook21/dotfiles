@@ -21,11 +21,9 @@ antigen bundles <<EOBUNDLES
 	colored-man-pages
 	ssh-agent
 	gpg-agent
-	composer
 	docker
 	ruby
 	jsontools
-	jessarcher/zsh-artisan
 	chrissicool/zsh-256color
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
