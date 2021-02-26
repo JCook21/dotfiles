@@ -24,6 +24,7 @@ antigen bundles <<EOBUNDLES
 	docker
 	ruby
 	jsontools
+	jenv
 	chrissicool/zsh-256color
 	zsh-users/zsh-completions
 	zsh-users/zsh-autosuggestions
