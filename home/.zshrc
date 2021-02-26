@@ -35,7 +35,6 @@ antigen bundles <<EOBUNDLES
 	lukechilds/zsh-nvm
 EOBUNDLES
 # Powerlevel9k theme config
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode command_execution_time nvm time)
@@ -83,6 +82,8 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 setopt HIST_IGNORE_ALL_DUPS
+
+bindkey -M vicmd v edit-command-line
 
 # Use Shift-Tab to go backwards through completion suggestions
 bindkey '^[[Z' reverse-menu-complete
