@@ -1,12 +1,9 @@
 [color]
 	ui = true
-[user]
-	name = Jeremy Cook
-	email = jeremycook0@icloud.com
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
-	editor = vim
+	editor = nvim
 [push]
 	default = current
 [credential]
@@ -17,3 +14,5 @@
 	autoSetupRebase = always
 [pull]
 	default = current
+[include]
+	path = ~/.local_git_config
