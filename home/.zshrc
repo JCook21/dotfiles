@@ -1,6 +1,12 @@
 # Antigen config
 # Use Antigen to manage all ZSH plugins
 source ~/.antigen/antigen.zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
 antigen use oh-my-zsh
@@ -33,12 +39,7 @@ antigen bundles <<EOBUNDLES
 	MichaelAquilina/zsh-you-should-use
 	lukechilds/zsh-nvm
 EOBUNDLES
-# Powerlevel9k theme config
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode command_execution_time nvm time)
-POWERLEVEL9K_VI_INSERT_MODE_STRING=''
-POWERLEVEL9K_SHORTEN_STRATEGY='truncate_middle'
+source ~/.p10k.zsh
 
 antigen theme romkatv/powerlevel10k
 
@@ -88,4 +89,3 @@ bindkey -M vicmd v edit-command-line
 bindkey '^[[Z' reverse-menu-complete
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
